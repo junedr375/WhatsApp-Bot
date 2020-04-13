@@ -44,6 +44,8 @@ def click():
             send_messages_with_media(all_names,replies)
   
 def send_messages(all_names,replies):
+    count = int
+    count = 0
     #Send message for each contact in the list
     for i in range(len(all_names)): 
         
@@ -70,12 +72,15 @@ def send_messages(all_names,replies):
         
         #Clicking the Send button 
         button = driver.find_element_by_class_name('_35EW6')
-        
         button.click()
+        count = count + 1
     msg = ""
+    print("Total number of message sent is: {}".format(count))
 
 def send_messages_with_media(all_names,replies):
     #Send message for each contact in the list
+    count = int
+    count = 0
     for i in range(len(all_names)): 
         
         #Code to Find the Whatsapp Search Box to search contacts.
@@ -106,7 +111,9 @@ def send_messages_with_media(all_names,replies):
         button.click()
         time.sleep(1)
         user = ""
-    
+        count = count + 1
+    print("Total number of message sent is: {}".format(count))
+
 
 
 #-----------MAIN--------------
